@@ -48,6 +48,8 @@ module.exports = {
                 text: 'Official Packages',
                 ariaLabel: 'Official Packages Menu',
                 items: [
+                    { text: 'Commander', link: '/docs/commander' },
+                    { text: 'Inspector', link: '/docs/inspector' },
                     { text: 'TMI Cluster', link: '/docs/tmi-cluster' },
                 ]
             },
@@ -71,6 +73,8 @@ module.exports = {
                     sidebarDepth: 2,
                     collapsable: false,
                     children: [
+                        'commander',
+                        'inspector',
                         'tmi-cluster',
                     ]
                 }
