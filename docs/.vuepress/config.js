@@ -38,6 +38,7 @@ module.exports = {
         repo: 'ghostzero/tmi-website',
         editLinks: true,
         docsDir: 'docs',
+        docsBranch: 'main',
         editLinkText: 'Help us improve this page!',
         lastUpdated: true,
         nav: [
