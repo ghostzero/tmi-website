@@ -4,7 +4,7 @@ module.exports = {
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#title
      */
-    title: 'PHP TMI Docs',
+    title: 'TMI PHP Docs',
 
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#description
@@ -35,18 +35,48 @@ module.exports = {
      * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
      */
     themeConfig: {
-        repo: '',
-        editLinks: false,
-        docsDir: '',
-        editLinkText: '',
-        lastUpdated: false,
+        repo: 'ghostzero/tmi-website',
+        editLinks: true,
+        docsDir: 'docs',
+        editLinkText: 'Help us improve this page!',
+        lastUpdated: true,
         nav: [
+            {
+                text: 'Documentation',
+                link: '/docs/'
+            },
+            {
+                text: 'Ecosystem',
+                ariaLabel: 'Ecosystem Menu',
+                items: [
+                    { text: 'TMI Cluster', link: '/docs/tmi-cluster' },
+                ]
+            },
             {
                 text: 'Discord',
                 link: 'https://discord.gg/qsxVMNg'
             }
         ],
-        sidebar: {}
+        sidebar: {
+            '/docs/': [
+                {
+                    title: 'Documentation',
+                    collapsable: false,
+                    children: [
+                        '',
+                        'events',
+                    ]
+                },
+                {
+                    title: 'Official Packages',
+                    sidebarDepth: 2,
+                    collapsable: false,
+                    children: [
+                        'tmi-cluster',
+                    ]
+                }
+            ],
+        },
     },
 
     /**
