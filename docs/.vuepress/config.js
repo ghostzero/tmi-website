@@ -1,15 +1,13 @@
-const {description} = require('../../package')
-
 module.exports = {
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#title
      */
-    title: 'TMI PHP Docs',
+    title: 'TMI.php',
 
     /**
      * Ref：https://v1.vuepress.vuejs.org/config/#description
      */
-    description: description,
+    description: 'The Twitch Message Interface for PHP 7.4+',
 
     /**
      * Extra tags to be injected to the page HTML `<head>`
@@ -86,5 +84,12 @@ module.exports = {
     plugins: [
         '@vuepress/plugin-back-to-top',
         '@vuepress/plugin-medium-zoom',
-    ]
+    ],
+    configureWebpack: {
+        resolve: {
+            alias: {
+                '@assets': 'docs/assets'
+            }
+        }
+    }
 }
