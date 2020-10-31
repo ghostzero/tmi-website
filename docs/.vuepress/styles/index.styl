@@ -6,3 +6,52 @@
 
 .home .hero img
   max-width 450px!important
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    /* Read next point */
+    unicode-range: U+000-5FF; /* Download only latin glyphs */
+    src: local('JetBrains Mono'),
+            url('https://fa-cdn.bitinflow.com/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+            url('https://fa-cdn.bitinflow.com/fonts/JetBrainsMono-Regular.woff') format('woff');
+}
+
+/**
+ * Code Editor Styles
+ */
+
+div[class*="language-"] {
+    background-color: #2b2b2b;
+}
+.theme-default-content pre[class="language-php"] code {
+    font-family: "JetBrains Mono", sans-serif;
+    line-height: 1.2;
+}
+.token.operator {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.token.important,
+.token.constant,
+.token.keyword {
+    color: #CC7832;
+}
+.token.function {
+    color: #FFC66D;
+}
+.token.comment,
+.token.string {
+    color: #6A8759;
+}
+.token.variable {
+    color: #9876AA;
+}
+.theme-default-content pre[class="language-php"] code
+.token.operator,
+.token.package,
+.token.punctuation,
+.token.class-name {
+    color: #A9B7C6;
+}
