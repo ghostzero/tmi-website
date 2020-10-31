@@ -1,6 +1,22 @@
 # Getting Started
 
-## Without OAuth Token
+## Installation
+
+To install TMI, you need to be using Composer in your project. For more details about Composer, see the [Composer documentation](https://getcomposer.org/doc/).
+
+```bash
+composer require ghostzero/tmi
+```
+
+## Usage
+
+After installation you are ready to start using the TMI Client in your PHP application. You can use TMI without or with an OAuth Token. Just follow the examples below:
+
+### Without OAuth Token
+
+:::warning
+Please note that you cannot send any messages without OAuth Token. You can get an OAuth Token with the [Twitch Chat OAuth Password Generator](https://twitchapps.com/tmi/) (which is one of the best known generators to generate a Twitch OAuth Token).
+:::
 
 ```php
 use GhostZero\Tmi\Channel;
@@ -24,7 +40,7 @@ $client->on('message', function (Channel $channel, Tags $tags, string $user, str
 $client->connect();
 ```
 
-## With OAuth Token
+### With OAuth Token
 
 ```php
 use GhostZero\Tmi\Channel;

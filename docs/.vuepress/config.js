@@ -15,7 +15,7 @@ module.exports = {
      * ref：https://v1.vuepress.vuejs.org/config/#head
      */
     head: [
-        ['meta', {name: 'theme-color', content: '#fe346e'}],
+        ['meta', {name: 'theme-color', content: '#6d00ff'}],
         ['meta', {name: 'apple-mobile-web-app-capable', content: 'yes'}],
         ['meta', {name: 'apple-mobile-web-app-status-bar-style', content: 'black'}]
     ],
@@ -45,8 +45,8 @@ module.exports = {
                 link: '/docs/'
             },
             {
-                text: 'Ecosystem',
-                ariaLabel: 'Ecosystem Menu',
+                text: 'Official Packages',
+                ariaLabel: 'Official Packages Menu',
                 items: [
                     { text: 'TMI Cluster', link: '/docs/tmi-cluster' },
                 ]
