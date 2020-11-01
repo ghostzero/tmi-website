@@ -3,7 +3,7 @@
 [[toc]]
 
 :::warning
-The package is a draft.
+This feature is available in v2-develop, but the inspector is not public, however.
 :::
 
 ## Introduction

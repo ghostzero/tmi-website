@@ -3,7 +3,7 @@
     <div class="heading">
       <h1>TMI.php</h1>
       <h3>The Twitch Message Interface for PHP 7.4+</h3>
-      <p>Inspired by tmi.js, php-irc-client this package is a full featured, high performance Twitch IRC client written in PHP 7.4.</p>
+      <p>Inspired by tmi.js and php-irc-client this package is a full featured, high performance Twitch IRC client written in PHP 7.4.</p>
       <p>Also have a look at ghostzero/tmi-cluster. TMI Cluster is a Laravel package that makes the PHP TMI client scalable.</p>
 
       <div>
