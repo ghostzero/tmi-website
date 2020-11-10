@@ -59,6 +59,18 @@ module.exports = {
             }
         ],
         sidebar: {
+            '/cloudbot/': [
+                {
+                    title: '[Private] Cloudbot',
+                    collapsable: false,
+                    children: [
+                        'command-settings',
+                        'custom-commands',
+                        'template-reference',
+                        'all-commands',
+                    ]
+                }
+            ],
             '/docs/': [
                 {
                     title: 'Documentation',
