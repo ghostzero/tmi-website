@@ -67,8 +67,8 @@ If you want to access a dynamic attribute of a variable, use the attribute funct
 The attribute function is also useful when the attribute contains special characters (like - that would be interpreted as the minus operator):
 
 ```twig
-{# equivalent to the non-working irc.userstate.room-id #}
-{{ attribute(irc.userstate, 'room-id') }}
+{# equivalent to the non-working irc.tags.room-id #}
+{{ attribute(irc.tags, 'room-id') }}
 ```
 
 ### Filters
@@ -122,11 +122,11 @@ Checkout our [Template Reference](template-reference.md) for all `Command`, `IRC
 
 ### IRC
 
-| Field         | Type   | Description                  |
-|---------------|--------|------------------------------|
-| irc.userstate | mixed  | Twitch IRC user state object |
-| irc.channel   | string | Raw channel username         |
-| irc.message   | string | Raw message                  |
+| Field       | Type   | Description                  |
+|-------------|--------|------------------------------|
+| irc.tags    | mixed  | Twitch IRC user state object |
+| irc.channel | string | Raw channel username         |
+| irc.message | string | Raw message                  |
 
 ## Examples of custom commands
 
@@ -139,7 +139,7 @@ You currently have {{ db('membership').currency|default(0) }} Currency!
 ```
 
 ```twig
-Your channel url is streamkit.gg/{{ db('channel').slug }}
+Your channel url is own3d.pro/{{ db('channel').slug }}
 ```
 
 ### Working with the cache & update database information
@@ -148,7 +148,7 @@ In this example, we allow the user to generate currency every 5 minutes.
 
 ```twig
 {% if cache('timely') == 1 %}
-  Your're still on your cooldown period.
+  You're still on your cooldown period.
 {% else %}
   {{ cache('timely', 1, 300) }}
   {{ inc('membership', 'curreny', 1)}}
@@ -159,5 +159,5 @@ In this example, we allow the user to generate currency every 5 minutes.
 ### Creating json requests
 
 ```twig
-It is {{ json('https://example.com/weather/germany').current_weather }} degree in Germany.
+Random Quote: {{ json('GET', 'https://api.quotable.io/random').content }}
 ```

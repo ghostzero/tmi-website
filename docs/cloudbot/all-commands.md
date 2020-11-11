@@ -1,5 +1,9 @@
 # All Commands
 
+:::danger
+These commands are currently not available in the OWN3D Chatbot.
+:::
+
 ### General <Badge text="default"/>
 
 | Command     | Description                                                                                                | Aliases | Example                  |

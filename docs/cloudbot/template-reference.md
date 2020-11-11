@@ -19,11 +19,11 @@
 
 ## IRC
 
-| Field         | Type   | Description                                                                                                                                                                    |
-|---------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| irc.userstate | mixed  | Twitch IRC user state object. Please checkout [`USERSTATE` (Twitch Tags)](https://dev.twitch.tv/docs/irc/tags#userstate-twitch-tags) for more information about existing tags. |
-| irc.channel   | string | Raw channel username.                                                                                                                                                          |
-| irc.message   | string | Raw message.                                                                                                                                                                   |
+| Field       | Type   | Description                                                                                                                                                                    |
+|-------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| irc.tags    | mixed  | Twitch IRC user state object. Please checkout [`USERSTATE` (Twitch Tags)](https://dev.twitch.tv/docs/irc/tags#userstate-twitch-tags) for more information about existing tags. |
+| irc.channel | string | Raw channel username.                                                                                                                                                          |
+| irc.message | string | Raw message.                                                                                                                                                                   |
 
 ## Functions <Badge text="beta" type="warning"/>
 
@@ -57,7 +57,7 @@ Data is stored in the cache for a maximum of one day. Always assume that data co
 With the `json` function you can download data from a JSON API. The response can be an `array`, or `null` if the api returns an error.
 
 ```twig
-It is {{ json('https://example.com/weather/germany').current_weather }} degree in Germany.
+Random Quote: {{ json('GET', 'https://api.quotable.io/random').content }}
 ```
 
 :::tip

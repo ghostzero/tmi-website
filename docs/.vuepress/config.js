@@ -61,9 +61,13 @@ module.exports = {
         sidebar: {
             '/cloudbot/': [
                 {
-                    title: '[Private] Cloudbot',
+                    title: '[Private] OWN3D Cloudbot',
                     collapsable: false,
                     children: [
+                        '',
+                        'auto-mod',
+                        'timers',
+                        'giveaways',
                         'command-settings',
                         'custom-commands',
                         'template-reference',

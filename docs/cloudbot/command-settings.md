@@ -10,6 +10,10 @@ Flags and switches are not affected by prefixes.
 
 ## Command List
 
+:::danger
+These commands are currently not available in the OWN3D Chatbot.
+:::
+
 :::tip
 If you're searching for a list of all commands, please checkout our [All Commands](all-commands.md) page.
 :::
