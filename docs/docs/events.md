@@ -4,218 +4,76 @@ Some events will only be fired if you are logged in with an OAuth Token.
 
 [[toc]]
 
-## Anon Gift Paid Upgrade
+## Register a Event
+
+After our v2.0 release all events will be registered with their fully qualified class name. In comparison to v1.0 and tmi.js there is a type security and you can see directly from the object which properties are given.
 
 ```php
-$client->on('anongiftpaidupgrade', function (string $channel, string $user, Tags $tags) {
-    //
+use GhostZero\Tmi\Events\Twitch\MessageEvent;
+
+$client->on(MessageEvent::class, function (MessageEvent $event) {
+    // handle your event
 });
-```
+``` 
 
-## Anon Sub Gift
+## List of all Events
 
-```php
-$client->on('anonsubgift', function (string $channel, int $streakMonths, string $recipient, string $methods, Tags $tags) {
-    //
-});
-```
+You can find all events under the namespace `GhostZero\Tmi\Events`.
 
-## Anon Sub Mystery Gift
+:::tip
+This part is not yet completely documented, because some of the events are not yet final.
+:::
 
-```php
-$client->on('anonsubmysterygift', function (string $channel, int $giftSubCount, string $methods, Tags $tags) {
-    //
-});
-```
+### Anon Gift Paid Upgrade
 
-## Cheer
+### Anon Sub Gift
 
-```php
-$client->on('cheer', function (string $channel, Tags $tags, string $user, string $message, bool $self) {
-    //
-});
-```
+### Anon Sub Mystery Gift
 
-## Followers Only Mode
+### Cheer
 
-```php
-$client->on('followers-only', function (string $channel, bool $enabled, int $minutes) {
-    //
-});
-```
+### Followers Only Mode
 
-## Gift Paid Upgrade
+### Gift Paid Upgrade
 
-```php
-$client->on('giftpaidupgrade', function (string $channel, string $user, $sender, Tags $tags) {
-    //
-});
-```
+### Hosted
 
-## Hosted
+### Hosting
 
-```php
-$client->on('hosted', function (string $channel, string $user, int $viewers, bool $autohost) {
-    //
-});
-```
+### Kick
 
-## Hosting
+### MOTD
 
-```php
-$client->on('hosting', function (string $channel, string $target, int $viewers) {
-    //
-});
-```
+### Message
 
-## Kick
+### Names
 
-```php
-$client->on('kick', function (string $channel, string $user, string $message) {
-    //
-});
-```
+### Ping
 
-## MOTD
+### Prime Paid Upgrade
 
-```php
-$client->on('motd', function (string $message) {
-    //
-});
-```
+### Privmsg
 
-## Message
+### Raid
 
-```php
-$client->on('message', function (Channel $channel, Tags $tags, string $user, string $message, bool $self) {
-    //
-});
-```
+### Registered
 
-## Names
+### Resub
 
-```php
-$client->on('names', function (string $channel, string $names) {
-    //
-});
-```
+### Ritual
 
-## Ping
+### Roomstate
 
-```php
-$client->on('ping', function (string $channel) {
-    //
-});
-```
+### Slow Mode
 
-## Prime Paid Upgrade
+### Sub
 
-```php
-$client->on('primepaidupgrade', function (string $channel, string $user, string $methods, Tags $tags) {
-    //
-});
-```
+### Sub Gift
 
-## Privmsg
+### Sub Mystery Gift
 
-```php
-$client->on('message', function (string $user, Tags $tags, string $target, string $message, bool $self) {
-    //
-});
-```
+### Topic Changed
 
-## Raid
+### Unhost
 
-```php
-$client->on('raid', function (string $channel, string $raidedChannel, int $viewers) {
-    //
-});
-```
-
-## Registered
-
-```php
-$client->on('registered', function () {
-    //
-});
-```
-
-## Resub
-
-```php
-$client->on('resub', function (string $channel, string $user, int $streakMonths, string $message, Tags $tags, string $methods) {
-    //
-});
-```
-
-## Ritual
-
-```php
-$client->on('ritual', function (string $channel, $ritual, string $user) {
-    //
-});
-```
-
-## Roomstate
-
-```php
-$client->on('roomstate', function (string $channel, Tags $tags) {
-    //
-});
-```
-
-## Slow Mode
-
-```php
-$client->on('slow', function (string $channel, bool $enabled, int $minutes) {
-    //
-});
-```
-
-## Sub
-
-```php
-$client->on('sub', function (string $channel, string $user, string $methods, string $message, Tags $tags) {
-    //
-});
-```
-
-## Sub Gift
-
-```php
-$client->on('subgift', function (string $channel, string $user, int $streakMonths, string $recipient, string $methods, Tags $tags) {
-    //
-});
-```
-
-## Sub Mystery Gift
-
-```php
-$client->on('submysterygift', function (string $channel, string $user, int $giftSubCount, string $methods, Tags $tags) {
-    //
-});
-```
-
-## Topic Changed
-
-```php
-$client->on('topic', function (string $channel, string $topic) {
-    //
-});
-```
-
-## Unhost
-
-```php
-$client->on('unhost', function (string $channel, int $viewers) {
-    //
-});
-```
-
-## Usernotice
-
-```php
-$client->on('usernotice', function (string $channel, string $messageId) {
-    //
-});
-```
+### Usernotice
