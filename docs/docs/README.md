@@ -14,7 +14,7 @@ After installation you are ready to start using the TMI Client in your PHP appli
 
 ### Without OAuth Token
 
-:::warning
+:::tip
 Please note that you cannot send any messages without OAuth Token. You can get an OAuth Token with the [Twitch Chat OAuth Password Generator](https://twitchapps.com/tmi/) (which is one of the best known generators to generate a Twitch OAuth Token).
 :::
 

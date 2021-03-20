@@ -1,0 +1,9 @@
+{
+    "require": {
+        "ghostzero/tmi": "^2.1",
+        "illuminate/support": "^8.31",
+        "haydenpierce/class-finder": "^0.4.3",
+        "jasny/phpdoc-parser": "dev-master",
+        "asar/anodoc": "^0.1.1"
+    }
+}
