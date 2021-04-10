@@ -19,10 +19,9 @@ Please note that you cannot send any messages without OAuth Token. You can get a
 :::
 
 ```php
-use GhostZero\Tmi\Channel;
 use GhostZero\Tmi\Client;
 use GhostZero\Tmi\ClientOptions;
-use GhostZero\Tmi\Tags;
+use GhostZero\Tmi\Events\Twitch\MessageEvent;
 
 $client = new Client(new ClientOptions([
     'connection' => [
@@ -33,8 +32,8 @@ $client = new Client(new ClientOptions([
     'channels' => ['ghostzero']
 ]));
 
-$client->on('message', function (Channel $channel, Tags $tags, string $user, string $message, bool $self) use ($client) {
-    print "{$tags['display-name']}: {$message}";
+$client->on(MessageEvent::class, function (MessageEvent $e) {
+    print "{$e->tags['display-name']}: {$e->message}";
 });
 
 $client->connect();
@@ -43,10 +42,9 @@ $client->connect();
 ### With OAuth Token
 
 ```php
-use GhostZero\Tmi\Channel;
 use GhostZero\Tmi\Client;
 use GhostZero\Tmi\ClientOptions;
-use GhostZero\Tmi\Tags;
+use GhostZero\Tmi\Events\Twitch\MessageEvent;
 
 $client = new Client(new ClientOptions([
     'options' => ['debug' => true],
@@ -62,11 +60,11 @@ $client = new Client(new ClientOptions([
     'channels' => ['ghostzero']
 ]));
 
-$client->on('message', function (Channel $channel, Tags $tags, string $user, string $message, bool $self) use ($client) {
-    if ($self) return;
+$client->on(MessageEvent::class, function (MessageEvent $e) use ($client) {
+    if ($e->self) return;
 
-    if (strtolower($message) === '!hello') {
-        $client->say($channel->getName(), "@{$user}, heya!");
+    if (strtolower($e->message) === '!hello') {
+        $client->say($e->channel->getName(), "@{$e->user}, heya!");
     }
 });
 
