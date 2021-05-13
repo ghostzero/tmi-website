@@ -8,7 +8,7 @@ The public release candidate is now available.
 
 ## Introduction
 
-Since the TMI Client does not provide a command handler, this function must normally be implemented by the developer. The Commander Package offers this implementation with a very simple Command & Channel Manager.
+Since the TMI Client does not provide a command handler, this function must normally be implemented by the developer. The Commander Package offers this implementation with a very simple Command Manager.
 
 ## Installation
 
