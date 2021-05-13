@@ -3,25 +3,19 @@
 [[toc]]
 
 :::warning
-The package is a draft.
+The public release candidate is now available. 
 :::
 
 ## Introduction
 
 Since the TMI Client does not provide a command handler, this function must normally be implemented by the developer. The Commander Package offers this implementation with a very simple Command & Channel Manager.
 
-The package also comes with the following system commands:
-
-- !help
-- !join
-- !part
-
 ## Installation
 
 You can install this package with Composer as follows:
 
 ```bash
-composer require ghostzero/commander
+composer require ghostzero/tmi-commander
 ```
 
 ## Usage
@@ -31,16 +25,16 @@ After installing the package you can easily create a new TMI Client and call `Co
 ```php
 use GhostZero\Tmi\Client;
 use GhostZero\Tmi\ClientOptions;
-use GhostZero\Commander\Commander;
+use GhostZero\Tmi\Commander\Commander;
+use GhostZero\Tmi\Events\Irc\PrivmsgEvent;
 
 $client = new Client(new ClientOptions([
     // configure your client here
     'channels' => ['ghostzero']
 ]));
 
-Commander::register($client, [
-    // register your commands here
-    'ping' => PongCommandExecutor::class,
+$commander = Commander::register($client->getEventHandler(), [
+    'bits' => new HelloWorldCommand()
 ]);
 
 $client->connect();
@@ -48,17 +42,29 @@ $client->connect();
 
 ## Create Commands
 
-Commands can be easily created by extending the class `CommandExecutor`. This provides a `handle(CommandSender $sender)` method that is called once the command is triggered. In the `CommandSender` object you can find all the information about the sender of the message.
+Commands can be easily created by extending the class `CommandExecutor`. This provides a `handle(CommandOrigins $origins)` method that is called once the command is triggered. In the `CommandOrigins` object you can find all the information about the sender of the message.
 
 ```php
-use GhostZero\Commander\CommandExecutor;
-use GhostZero\Commander\CommandSender;
+use GhostZero\Tmi\Commander\CommandExecutor;
+use GhostZero\Tmi\Commander\CommandOrigins;
+use GhostZero\Tmi\Commander\Option;
 
-class PongCommandExecutor extends CommandExecutor
+class HelloWorldCommand extends CommandExecutor
 {
-    public function handle(CommandSender $sender)
+    public function getOptions(): array
     {
-        $sender->reply('Test');
+        return [
+            Option::create('a', null, Option::OPTIONAL_ARGUMENT),
+            Option::create('b', 'beta', Option::REQUIRED_ARGUMENT),
+            Option::create('v', 'verbose'),
+        ];
+    }
+
+    public function handle(CommandOrigins $origins): bool
+    {
+        $origins->event->client->say('ghostzero', 'Hello World!');
+
+        return true;
     }
 }
 ```
