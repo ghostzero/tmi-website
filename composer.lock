@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8be164903b18c134920cf18e638d8df2",
+    "content-hash": "a133c2649d6e8478a02beaa874360f6e",
     "packages": [
         {
             "name": "asar/anodoc",
@@ -193,16 +193,16 @@
         },
         {
             "name": "ghostzero/tmi",
-            "version": "2.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ghostzero/tmi.git",
-                "reference": "9935a8b41e90e53c493353b8645925b7048b0aa8"
+                "reference": "c2c34aecfa4968784db7ac57346e22d578109e21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ghostzero/tmi/zipball/9935a8b41e90e53c493353b8645925b7048b0aa8",
-                "reference": "9935a8b41e90e53c493353b8645925b7048b0aa8",
+                "url": "https://api.github.com/repos/ghostzero/tmi/zipball/c2c34aecfa4968784db7ac57346e22d578109e21",
+                "reference": "c2c34aecfa4968784db7ac57346e22d578109e21",
                 "shasum": ""
             },
             "require": {
@@ -212,8 +212,9 @@
                 "react/socket": "^1.6"
             },
             "require-dev": {
-                "phpunit/phpunit": "^9"
+                "phpunit/phpunit": "^9.3.3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -233,9 +234,55 @@
             "description": "PHP Twitch Messaging Interface",
             "support": {
                 "issues": "https://github.com/ghostzero/tmi/issues",
-                "source": "https://github.com/ghostzero/tmi/tree/2.1.0"
+                "source": "https://github.com/ghostzero/tmi/tree/master"
             },
-            "time": "2021-02-19T16:58:42+00:00"
+            "time": "2021-05-13T16:57:47+00:00"
+        },
+        {
+            "name": "ghostzero/tmi-commander",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ghostzero/tmi-commander.git",
+                "reference": "ad2f700cb3981c2d9a755cf42068da5ab8e3e4a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ghostzero/tmi-commander/zipball/ad2f700cb3981c2d9a755cf42068da5ab8e3e4a1",
+                "reference": "ad2f700cb3981c2d9a755cf42068da5ab8e3e4a1",
+                "shasum": ""
+            },
+            "require": {
+                "ghostzero/tmi": "dev-master as 2.3",
+                "php": "^7.4|^8.0",
+                "ulrichsg/getopt-php": "^3.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GhostZero\\Tmi\\Commander\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "René Preuß",
+                    "email": "rene@preuss.io"
+                }
+            ],
+            "description": "PHP Twitch Messaging Interface Command Handler",
+            "support": {
+                "issues": "https://github.com/ghostzero/tmi-commander/issues",
+                "source": "https://github.com/ghostzero/tmi-commander/tree/0.2.0"
+            },
+            "time": "2021-05-13T17:40:11+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
@@ -872,16 +919,16 @@
         },
         {
             "name": "react/dns",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/dns.git",
-                "reference": "665260757171e2ab17485b44e7ffffa7acb6ca1f"
+                "reference": "b22b0b20278e8535e633ab71a52472c5bf620aa1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/665260757171e2ab17485b44e7ffffa7acb6ca1f",
-                "reference": "665260757171e2ab17485b44e7ffffa7acb6ca1f",
+                "url": "https://api.github.com/repos/reactphp/dns/zipball/b22b0b20278e8535e633ab71a52472c5bf620aa1",
+                "reference": "b22b0b20278e8535e633ab71a52472c5bf620aa1",
                 "shasum": ""
             },
             "require": {
@@ -936,7 +983,7 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/dns/issues",
-                "source": "https://github.com/reactphp/dns/tree/v1.4.0"
+                "source": "https://github.com/reactphp/dns/tree/v1.5.0"
             },
             "funding": [
                 {
@@ -948,7 +995,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-18T12:12:55+00:00"
+            "time": "2021-03-05T12:16:50+00:00"
         },
         {
             "name": "react/event-loop",
@@ -998,23 +1045,23 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.8.0",
+            "version": "2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4"
+                "reference": "a9752a861e21c0fe0b380c9f9e55beddc0ed7d31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/f3cff96a19736714524ca0dd1d4130de73dbbbc4",
-                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/a9752a861e21c0fe0b380c9f9e55beddc0ed7d31",
+                "reference": "a9752a861e21c0fe0b380c9f9e55beddc0ed7d31",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.0 || ^6.5 || ^5.7 || ^4.8.36"
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.36"
             },
             "type": "library",
             "autoload": {
@@ -1042,9 +1089,19 @@
             ],
             "support": {
                 "issues": "https://github.com/reactphp/promise/issues",
-                "source": "https://github.com/reactphp/promise/tree/v2.8.0"
+                "source": "https://github.com/reactphp/promise/tree/2.x"
             },
-            "time": "2020-05-12T15:16:56+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-02-09T15:06:50+00:00"
         },
         {
             "name": "react/promise-timer",
@@ -1572,6 +1629,50 @@
             "time": "2020-09-28T13:05:58+00:00"
         },
         {
+            "name": "ulrichsg/getopt-php",
+            "version": "v3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/getopt-php/getopt-php.git",
+                "reference": "411341639c786d78f6d379595dabee21532261ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/getopt-php/getopt-php/zipball/411341639c786d78f6d379595dabee21532261ee",
+                "reference": "411341639c786d78f6d379595dabee21532261ee",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ulrichsg\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ulrich Schmidt-Goertz",
+                    "email": "ulrich@schmidt-goertz.de"
+                }
+            ],
+            "description": "Command line arguments parser for PHP 5.3",
+            "homepage": "http://ulrichsg.github.io/getopt-php",
+            "support": {
+                "issues": "https://github.com/getopt-php/getopt-php/issues",
+                "source": "https://github.com/getopt-php/getopt-php/tree/v3"
+            },
+            "time": "2015-04-07T09:47:53+00:00"
+        },
+        {
             "name": "voku/portable-ascii",
             "version": "1.5.6",
             "source": {
@@ -1648,9 +1749,11 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "jasny/phpdoc-parser": 20
+        "ghostzero/tmi": 20,
+        "jasny/phpdoc-parser": 20,
+        "ghostzero/tmi-commander": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

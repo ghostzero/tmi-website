@@ -26,7 +26,6 @@ After installing the package you can easily create a new TMI Client and call `Co
 use GhostZero\Tmi\Client;
 use GhostZero\Tmi\ClientOptions;
 use GhostZero\Tmi\Commander\Commander;
-use GhostZero\Tmi\Events\Irc\PrivmsgEvent;
 
 $client = new Client(new ClientOptions([
     // configure your client here
