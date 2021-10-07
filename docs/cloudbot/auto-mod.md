@@ -6,14 +6,14 @@ Make moderation easier with an machine learning assisted tool that helps fight h
 With /mod OWN3D you can give our Chatbot all necessary rights. Read [here](README.md#why-our-chatbot-need-s-a-moderator-role) why we need Mod.
 :::
 
-![](../images/chrome_T2RmmnrFNd.png)
+![Moderation Settings](../images/chrome_FlkC059qKA.png)
 
 ## Scan every message for toxicity
 
 The Auto Mod scores each message in your chat. Based on the score you can make automatic actions, for example banning the user in your chat if the score is over 70%. The higher the score is, the more toxic the message is.
 
 :::warning
-Scan messages for toxic content is currently in public beta and only available to a few selected users. All messages in your chat will be processed according to our current privacy policy.
+Scan messages for toxic content is currently in closed beta and only available to a few selected users. All messages in your chat will be processed according to our current privacy policy.
 :::
 
 ### Custom Actions

@@ -1,22 +1,22 @@
 # Custom Commands
 
-Custom commands allow you to create your own commands. The Custom Command system in StreamKit is somewhat complex and can be used for some advanced stuff.
+Custom commands allow you to create your own commands. The Custom Command system in OWN3D Pro is somewhat complex and can be used for some advanced stuff.
 
 ## Custom Commands
 
-![Create a StreamKit Command](../images/create-a-command.png)
+![Create a OWN3D Pro Command](../images/create-a-command.png)
 
-To create your first custom command, go to the StreamKit Dashboard. There you click on Commands.
+To create your first custom command, go to the OWN3D Pro Dashboard. There you click on Commands.
  
 ## Advanced Custom Commands
 
 :::tip
-Some basic coding knowledge may be required to use some of these features. 
+Some basic coding knowledge with [Twig](https://twig.symfony.com/doc/2.x/) may be required to use some of these features. 
 :::
 
 ## Using templates in custom commands
 
-If you wish to do anything more than a "Type in a command" -> "Make the bot say something. Such as assigning people roles, getting information on the person calling the command, and many others. It is recommended that you check out this page:
+If you wish to do anything more than a "Type in a command" -> "Make the bot say something." Such as getting information on the person calling the command, and many others things. It is recommended that you check out this page:
 
 ### Synopsis
 
@@ -27,12 +27,11 @@ A template contains **variables** or **expressions**, which get replaced with va
 Below is a minimal template that illustrates a few basics. We will cover further details later on:
 
 ```twig
-{% if cache('timely') == 1 %}
-  Your're still on your cooldown period.
+{% set number = random(1, 6) %}
+{% if number == 6 %}
+  You rolled your lucky 6 today!
 {% else %}
-  {{ cache('timely', 1, 300) }}
-  {{ inc('membership', 'curreny', 1)}}
-  You collected $1!
+  You rolled {{ number }}!
 {% endif %}
 ```
 
@@ -85,15 +84,14 @@ The following example title-cases the irc message:
 
 A control structure refers to all those things that control the flow of a program - conditionals (i.e. if/elseif/else), for-loops, as well as things like blocks. Control structures appear inside `{% ... %}` blocks.
 
-In this example, we allow the user to generate currency every 5 minutes:
+In this example, we roll a dice:
 
 ```twig
-{% if cache('timely') == 1 %}
-  Your're still on your cooldown period.
+{% set number = random(1, 6) %}
+{% if number == 6 %}
+  You rolled your lucky 6 today!
 {% else %}
-  {{ cache('timely', 1, 300) }}
-  {{ inc('membership', 'curreny', 1)}}
-  You collected $1!
+  You rolled {{ number }}!
 {% endif %}
 ```
 
@@ -158,6 +156,41 @@ In this example, we allow the user to generate currency every 5 minutes.
 
 ### Creating json requests
 
+The `json` method allows you to fetch data from another services. 
+To learn more about this function, checkout [HTTP JSON Requests](template-reference.md#http-json-requests).
+
 ```twig
 Random Quote: {{ json('GET', 'https://api.quotable.io/random').content }}
+```
+
+## Examples
+
+### Magic 8-Ball
+
+This will create a simple `!8ball` ccmmand.
+
+```twig
+{% set answers = [
+    "As I see it, yes",
+    "It is certain",
+    "It is decidedly so",
+    "Most likely",
+    "Outlook good",
+    "Signs point to yes",
+    "Without a doubt",
+    "Yes",
+    "Yes - definitely",
+    "You may rely on it",
+    "Reply hazy, try again",
+    "Ask again later",
+    "Better not tell you now",
+    "Cannot predict now",
+    "Concentrate and ask again",
+    "Don't count on it",
+    "My reply is no",
+    "My sources say no",
+    "Outlook not so good",
+    "Very doubtful"
+] %}
+{{ answers[random(1, answers|length)-1] }}
 ```

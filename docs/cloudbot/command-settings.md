@@ -11,7 +11,7 @@ Flags and switches are not affected by prefixes.
 ## Command List
 
 :::danger
-These commands are currently not available in the OWN3D Chatbot.
+These commands are currently not available in the OWN3D Pro Chatbot.
 :::
 
 :::tip
