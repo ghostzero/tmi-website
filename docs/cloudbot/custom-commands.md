@@ -165,7 +165,7 @@ Random Quote: {{ json('GET', 'https://api.quotable.io/random').content }}
 
 ### Magic 8-Ball
 
-This will create a simple `!8ball` ccmmand.
+This will create a simple `!8ball` command.
 
 ```twig
 {% set answers = [
