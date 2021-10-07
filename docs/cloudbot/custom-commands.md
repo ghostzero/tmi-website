@@ -190,5 +190,21 @@ This will create a simple `!8ball` command.
     "Outlook not so good",
     "Very doubtful"
 ] %}
-{{ answers[random(1, answers|length)-1] }}
+{{ random(answers) }}
+```
+
+### Lurk Messages
+
+Twitch lurker is a term given to a passive viewer who is watching a stream but not contributing to the channel’s chat. People who are lurking in chat are often assumed to be bot traffic when in reality lurkers make up the vast majority of viewers on the platform.
+
+Create a funny `!lurk` command:
+
+```twig
+{% set messages = [
+    "is watching from the bushes.",
+    "has spilled tea on their keyboard so they will not be chatting.",
+    "is lurking in the shadows like a big spooky weirdo."
+] %}
+{{ attribute(irc.tags, 'display-name') }}
+{{ random(messages) }}
 ```
