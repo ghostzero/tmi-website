@@ -163,8 +163,6 @@ To learn more about this function, checkout [HTTP JSON Requests](template-refere
 Random Quote: {{ json('GET', 'https://api.quotable.io/random').content }}
 ```
 
-## Examples
-
 ### Magic 8-Ball
 
 This will create a simple `!8ball` ccmmand.
