@@ -208,3 +208,11 @@ Create a funny `!lurk` command:
 {{ attribute(irc.tags, 'display-name') }}
 {{ random(messages) }}
 ```
+
+### Shoutout
+
+Create a shoutout `!so` command:
+
+```twig
+... TBA ...
+```
