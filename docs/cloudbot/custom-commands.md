@@ -211,8 +211,13 @@ Create a funny `!lurk` command:
 
 ### Shoutout
 
-Create a shoutout `!so` command:
+Create a shoutout command `!so <username>`:
 
 ```twig
-... TBA ...
+{% set channel = channel(user(args[1]).id) %}
+{% if channel %}
+    Check out {{ channel.name }} over at {{ channel.url }}, they are playing {{ channel.game }}!
+{% else %}
+    Please define a valid user with "!so <username>".
+{% endif %}
 ```
