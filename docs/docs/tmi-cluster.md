@@ -31,7 +31,7 @@ php artisan migrate
 To make your frontend accessible under `/tmi-cluster` you have to add the following route declaration in your `web.php`:
 
 ```php
-use GhostZero\TmiCluster\TmiCluster;
+use GhostZero\TmiCluster\Facades\TmiCluster;
 
 TmiCluster::routes();
 ```
