@@ -24,7 +24,8 @@ module.exports = {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-BVCGWNDSYJ');
-        `]
+        `],
+        ['script', {src: 'https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'}],
     ],
 
     /**
