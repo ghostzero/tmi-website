@@ -35,6 +35,7 @@ $client->on(InspectorEvent::class, function (InspectorEvent $event) {
 | Property | Type(s) | Description |
 |----------|---------|-------------|
 | **payload** | `stdClass` |    Contains the session. |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -53,6 +54,7 @@ $client->on(InspectorReadyEvent::class, function (InspectorReadyEvent $event) {
 | Property | Type(s) | Description |
 |----------|---------|-------------|
 | **url** | `string` | URL of the Inspector session. |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -74,6 +76,7 @@ $client->on(JoinEvent::class, function (JoinEvent $event) {
 | **tags** | `Tags` | Twitch Tags object |
 | **message** | `string` | Message content |
 | **user** | `string` | Username of the viewer |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -94,6 +97,7 @@ $client->on(KickEvent::class, function (KickEvent $event) {
 | **channel** | `Channel` | IRC Channel state object |
 | **user** | `string` | Username of the viewer |
 | **message** | `string` | Message content |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -112,6 +116,7 @@ $client->on(MotdEvent::class, function (MotdEvent $event) {
 | Property | Type(s) | Description |
 |----------|---------|-------------|
 | **message** | `string` | Message content |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -131,6 +136,7 @@ $client->on(NameReplyEvent::class, function (NameReplyEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **names** | `array` | List of usernames that are visible |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -152,6 +158,7 @@ $client->on(PartEvent::class, function (PartEvent $event) {
 | **tags** | `Tags` | Twitch Tags object |
 | **message** | `string` | Message content |
 | **user** | `string` | Username of the viewer |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -170,7 +177,9 @@ $client->on(PingEvent::class, function (PingEvent $event) {
 });
 ```
 
-
+| Property | Type(s) | Description |
+|----------|---------|-------------|
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -193,6 +202,7 @@ $client->on(PrivmsgEvent::class, function (PrivmsgEvent $event) {
 | **user** | `string` | Username of the viewer |
 | **message** | `string` | Message content |
 | **self** | `bool` | Indicates if the message is from ourselves. |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -212,6 +222,7 @@ $client->on(TopicChangeEvent::class, function (TopicChangeEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **topic** | `string` | The  new topic of the channel. |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -227,7 +238,9 @@ $client->on(WelcomeEvent::class, function (WelcomeEvent $event) {
 });
 ```
 
-
+| Property | Type(s) | Description |
+|----------|---------|-------------|
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -248,6 +261,7 @@ $client->on(AnonGiftPaidUpgradeEvent::class, function (AnonGiftPaidUpgradeEvent 
 | **channel** | `Channel` | IRC Channel state object |
 | **user** | `string` | Username of the viewer |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -270,6 +284,7 @@ $client->on(AnonSubGiftEvent::class, function (AnonSubGiftEvent $event) {
 | **recipient** | `string` | Username of the recipient |
 | **plan** | `Tags` | Subscription Plan object |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -291,6 +306,7 @@ $client->on(AnonSubMysteryGiftEvent::class, function (AnonSubMysteryGiftEvent $e
 | **giftSubCount** | `int` | Count of given gifts |
 | **plan** | `Tags` | Subscription Plan object |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -313,6 +329,7 @@ $client->on(CheerEvent::class, function (CheerEvent $event) {
 | **user** | `string` | Username of the viewer |
 | **message** | `string` | Message content |
 | **self** | `bool` | Indicates if the message is from ourselves. |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -332,6 +349,7 @@ $client->on(EmoteOnlyModeEvent::class, function (EmoteOnlyModeEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **enabled** | `bool` | Indicates whether the mode is active |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -352,6 +370,7 @@ $client->on(FollowersOnlyModeEvent::class, function (FollowersOnlyModeEvent $eve
 | **channel** | `Channel` | IRC Channel state object |
 | **enabled** | `bool` | Indicates whether the mode is active |
 | **minutes** | `int` | The number of seconds a chatter without moderator privileges must wait between sending messages |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -373,6 +392,7 @@ $client->on(GiftPaidUpgradeEvent::class, function (GiftPaidUpgradeEvent $event) 
 | **user** | `string` | Username of the viewer |
 | **sender** | `string` | Username of the gifter |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -394,6 +414,7 @@ $client->on(HostedEvent::class, function (HostedEvent $event) {
 | **user** | `string` | Username of the streamer |
 | **viewers** | `int` | Number of viewers |
 | **autoHost** | `bool` | Indicates whether the host is automatically |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -414,6 +435,7 @@ $client->on(HostingEvent::class, function (HostingEvent $event) {
 | **channel** | `Channel` | IRC Channel state object |
 | **target** | `string` | Username of the steamer |
 | **viewers** | `int` | Number of viewers |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -436,6 +458,7 @@ $client->on(MessageEvent::class, function (MessageEvent $event) {
 | **user** | `string` | Username of the viewer |
 | **message** | `string` | Message content |
 | **self** | `bool` | Indicates if the message is from ourselves. |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -454,7 +477,8 @@ $client->on(ModsEvent::class, function (ModsEvent $event) {
 | Property | Type(s) | Description |
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
-| **users** | `mixed` |  |
+| **users** | `array` | List of usernames |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -474,6 +498,7 @@ $client->on(NoticeEvent::class, function (NoticeEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **messageId** | `string` | Unique message identifier |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -495,6 +520,7 @@ $client->on(PrimePaidUpgradeEvent::class, function (PrimePaidUpgradeEvent $event
 | **user** | `string` | Username of the viewer |
 | **plan** | `Tags` | Subscription Plan object |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -514,6 +540,7 @@ $client->on(R9kModeEvent::class, function (R9kModeEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **enabled** | `bool` | Indicates whether the mode is active |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -534,6 +561,7 @@ $client->on(RaidEvent::class, function (RaidEvent $event) {
 | **channel** | `Channel` | IRC Channel state object |
 | **user** | `string` | Username of the streamer |
 | **viewers** | `int` | Number of viewers |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -557,6 +585,7 @@ $client->on(ResubEvent::class, function (ResubEvent $event) {
 | **message** | `string` | Message content |
 | **tags** | `Tags` | Twitch Tags object |
 | **plan** | `Tags` | Subscription Plan object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -579,6 +608,7 @@ $client->on(RitualEvent::class, function (RitualEvent $event) {
 | **user** | `string` | Username of the viewer |
 | **tags** | `Tags` | Twitch Tags object |
 | **message** | `string` | Message content |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -598,6 +628,7 @@ $client->on(RoomStateEvent::class, function (RoomStateEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -618,6 +649,7 @@ $client->on(SlowModeEvent::class, function (SlowModeEvent $event) {
 | **channel** | `Channel` | IRC Channel state object |
 | **enabled** | `bool` | Indicates whether the mode is active |
 | **minutes** | `int` | The number of seconds a chatter without moderator privileges must wait between sending messages |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -640,6 +672,7 @@ $client->on(SubEvent::class, function (SubEvent $event) {
 | **plan** | `Tags` | Subscription Plan object |
 | **message** | `string` | Message content |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -663,6 +696,7 @@ $client->on(SubGiftEvent::class, function (SubGiftEvent $event) {
 | **recipient** | `string` | Username of the recipient |
 | **plan** | `Tags` | Subscription Plan object |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -685,6 +719,7 @@ $client->on(SubMysteryGiftEvent::class, function (SubMysteryGiftEvent $event) {
 | **giftSubCount** | `int` | Count of given gifts |
 | **plan** | `Tags` | Subscription Plan object |
 | **tags** | `Tags` | Twitch Tags object |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -704,6 +739,7 @@ $client->on(SubsOnlyModeEvent::class, function (SubsOnlyModeEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **enabled** | `bool` | Indicates whether the mode is active |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -723,6 +759,7 @@ $client->on(UnhostEvent::class, function (UnhostEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **viewers** | `int` | Number of viewers |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -742,6 +779,7 @@ $client->on(UserNoticeEvent::class, function (UserNoticeEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **messageId** | `string` | Unique message identifier |
+| **client** | `Client` | Client object |
 
 > Since:
 
@@ -761,5 +799,6 @@ $client->on(VipsEvent::class, function (VipsEvent $event) {
 |----------|---------|-------------|
 | **channel** | `Channel` | IRC Channel state object |
 | **users** | `array` | List of usernames |
+| **client** | `Client` | Client object |
 
 > Since:
