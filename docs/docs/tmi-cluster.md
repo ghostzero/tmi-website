@@ -107,6 +107,10 @@ You may check the current status of your TMI Cluster by using the `tmi-cluster:l
 php artisan tmi-cluster:list
 ```
 
+### Deploying TMI Cluster
+
+If you are deploying TMI Cluster to a live server, you should configure a process monitor to monitor the `php artisan tmi-cluster` command and restart it if it quits unexpectedly. When deploying fresh code to your server, you will need to instruct the master TMI Cluster process to terminate so it can be restarted by your process monitor and receive your code changes.
+
 ## Watching For File Changes
 
 Since your application is loaded in memory once when the TMI-Cluster starts, any changes to your application's files will not be reflected on incoming irc messages. For convenience, you may use the `--watch` flag to instruct TMI-Cluster to automatically restart the supervisor on any file changes within your application:
@@ -122,10 +126,6 @@ npm install --save-dev chokidar
 ```
 
 You may configure the directories and files that should be watched using the watch configuration option within your application's `config/tmi-cluster.php` configuration file.
-
-### Deploying TMI Cluster
-
-If you are deploying TMI Cluster to a live server, you should configure a process monitor to monitor the `php artisan tmi-cluster` command and restart it if it quits unexpectedly. When deploying fresh code to your server, you will need to instruct the master TMI Cluster process to terminate so it can be restarted by your process monitor and receive your code changes.
 
 #### Installing Supervisor
 
