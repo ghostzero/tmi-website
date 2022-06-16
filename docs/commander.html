@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Commander | TMI.php</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <script async="true" src="https://www.googletagmanager.com/gtag/js?id=G-BVCGWNDSYJ"></script>
+    <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BVCGWNDSYJ');
+        </script>
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <meta name="description" content="The Twitch Message Interface for PHP 7.4+">
+    <meta name="theme-color" content="#6d00ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.c6579106.css" as="style"><link rel="preload" href="/assets/js/app.7fb1c865.js" as="script"><link rel="preload" href="/assets/js/2.dae40f8a.js" as="script"><link rel="preload" href="/assets/js/20.4f18344d.js" as="script"><link rel="prefetch" href="/assets/js/10.097d4842.js"><link rel="prefetch" href="/assets/js/11.c9047bd6.js"><link rel="prefetch" href="/assets/js/12.05b83e2f.js"><link rel="prefetch" href="/assets/js/13.d622c13e.js"><link rel="prefetch" href="/assets/js/14.4daae502.js"><link rel="prefetch" href="/assets/js/15.9cc25cec.js"><link rel="prefetch" href="/assets/js/16.4a6925ee.js"><link rel="prefetch" href="/assets/js/17.26606a8a.js"><link rel="prefetch" href="/assets/js/18.8f916308.js"><link rel="prefetch" href="/assets/js/19.64010cd6.js"><link rel="prefetch" href="/assets/js/21.508be964.js"><link rel="prefetch" href="/assets/js/22.0fe6e0a2.js"><link rel="prefetch" href="/assets/js/3.3d8a9167.js"><link rel="prefetch" href="/assets/js/4.35ab57a0.js"><link rel="prefetch" href="/assets/js/5.b8eb358f.js"><link rel="prefetch" href="/assets/js/6.6de06d21.js"><link rel="prefetch" href="/assets/js/7.a4914bb9.js"><link rel="prefetch" href="/assets/js/8.37adbc9c.js"><link rel="prefetch" href="/assets/js/9.e0b79f5d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c6579106.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="global-layout"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">TMI.php</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link router-link-active">
+  Documentation
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Official Packages Menu" class="dropdown-title"><span class="title">Official Packages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Official Packages Menu" class="mobile-dropdown-title"><span class="title">Official Packages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/commander.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Commander
+</a></li><li class="dropdown-item"><!----> <a href="/docs/inspector.html" class="nav-link">
+  Inspector
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tmi-cluster.html" class="nav-link">
+  TMI Cluster
+</a></li></ul></div></div><div class="nav-item"><a href="https://discord.gg/qsxVMNg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Discord
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/ghostzero/tmi-website" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link router-link-active">
+  Documentation
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Official Packages Menu" class="dropdown-title"><span class="title">Official Packages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Official Packages Menu" class="mobile-dropdown-title"><span class="title">Official Packages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/docs/commander.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Commander
+</a></li><li class="dropdown-item"><!----> <a href="/docs/inspector.html" class="nav-link">
+  Inspector
+</a></li><li class="dropdown-item"><!----> <a href="/docs/tmi-cluster.html" class="nav-link">
+  TMI Cluster
+</a></li></ul></div></div><div class="nav-item"><a href="https://discord.gg/qsxVMNg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Discord
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/ghostzero/tmi-website" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Documentation</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/" aria-current="page" class="sidebar-link">Getting Started</a></li><li><a href="/docs/events.html" class="sidebar-link">Events</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Official Packages</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/commander.html" aria-current="page" class="active sidebar-link">Commander</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/commander.html#introduction" class="sidebar-link">Introduction</a></li><li class="sidebar-sub-header"><a href="/docs/commander.html#installation" class="sidebar-link">Installation</a></li><li class="sidebar-sub-header"><a href="/docs/commander.html#usage" class="sidebar-link">Usage</a></li><li class="sidebar-sub-header"><a href="/docs/commander.html#create-commands" class="sidebar-link">Create Commands</a></li></ul></li><li><a href="/docs/inspector.html" class="sidebar-link">Inspector</a></li><li><a href="/docs/tmi-cluster.html" class="sidebar-link">TMI Cluster</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="commander"><a href="#commander" class="header-anchor">#</a> Commander</h1> <p></p><div class="table-of-contents"><ul><li><a href="#introduction">Introduction</a></li><li><a href="#installation">Installation</a></li><li><a href="#usage">Usage</a></li><li><a href="#create-commands">Create Commands</a></li></ul></div><p></p> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>The public release candidate is now available.</p></div> <h2 id="introduction"><a href="#introduction" class="header-anchor">#</a> Introduction</h2> <p>Since the TMI Client does not provide a command handler, this function must normally be implemented by the developer. The Commander Package offers this implementation with a very simple Command Manager.</p> <h2 id="installation"><a href="#installation" class="header-anchor">#</a> Installation</h2> <p>You can install this package with Composer as follows:</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">composer</span> require ghostzero/tmi-commander
+</code></pre></div><h2 id="usage"><a href="#usage" class="header-anchor">#</a> Usage</h2> <p>After installing the package you can easily create a new TMI Client and call <code>Commander::register(...)</code>. When registering you can specify all your commands that the Commander should handle.</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">use</span> <span class="token package">GhostZero<span class="token punctuation">\</span>Tmi<span class="token punctuation">\</span>Client</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">GhostZero<span class="token punctuation">\</span>Tmi<span class="token punctuation">\</span>ClientOptions</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">GhostZero<span class="token punctuation">\</span>Tmi<span class="token punctuation">\</span>Commander<span class="token punctuation">\</span>Commander</span><span class="token punctuation">;</span>
+
+<span class="token variable">$client</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Client</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ClientOptions</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token comment">// configure your client here</span>
+    <span class="token string single-quoted-string">'channels'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'ghostzero'</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token variable">$commander</span> <span class="token operator">=</span> <span class="token class-name static-context">Commander</span><span class="token operator">::</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token variable">$client</span><span class="token operator">-&gt;</span><span class="token function">getEventHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+    <span class="token string single-quoted-string">'bits'</span> <span class="token operator">=&gt;</span> <span class="token keyword">new</span> <span class="token class-name">HelloWorldCommand</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token variable">$client</span><span class="token operator">-&gt;</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="create-commands"><a href="#create-commands" class="header-anchor">#</a> Create Commands</h2> <p>Commands can be easily created by extending the class <code>CommandExecutor</code>. This provides a <code>handle(CommandOrigins $origins)</code> method that is called once the command is triggered. In the <code>CommandOrigins</code> object you can find all the information about the sender of the message.</p> <div class="language-php extra-class"><pre class="language-php"><code><span class="token keyword">use</span> <span class="token package">GhostZero<span class="token punctuation">\</span>Tmi<span class="token punctuation">\</span>Commander<span class="token punctuation">\</span>CommandExecutor</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">GhostZero<span class="token punctuation">\</span>Tmi<span class="token punctuation">\</span>Commander<span class="token punctuation">\</span>CommandOrigins</span><span class="token punctuation">;</span>
+<span class="token keyword">use</span> <span class="token package">GhostZero<span class="token punctuation">\</span>Tmi<span class="token punctuation">\</span>Commander<span class="token punctuation">\</span>Option</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">HelloWorldCommand</span> <span class="token keyword">extends</span> <span class="token class-name">CommandExecutor</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">getOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">array</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span>
+            <span class="token class-name static-context">Option</span><span class="token operator">::</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'a'</span><span class="token punctuation">,</span> <span class="token constant">null</span><span class="token punctuation">,</span> <span class="token class-name static-context">Option</span><span class="token operator">::</span><span class="token constant">OPTIONAL_ARGUMENT</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name static-context">Option</span><span class="token operator">::</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'b'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'beta'</span><span class="token punctuation">,</span> <span class="token class-name static-context">Option</span><span class="token operator">::</span><span class="token constant">REQUIRED_ARGUMENT</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            <span class="token class-name static-context">Option</span><span class="token operator">::</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'v'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'verbose'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function">handle</span><span class="token punctuation">(</span><span class="token class-name type-declaration">CommandOrigins</span> <span class="token variable">$origins</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">bool</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$origins</span><span class="token operator">-&gt;</span><span class="token property">event</span><span class="token operator">-&gt;</span><span class="token property">client</span><span class="token operator">-&gt;</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'ghostzero'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token constant boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/ghostzero/tmi-website/edit/main/docs/docs/commander.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">6/16/2022, 11:55:04 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/events.html" class="prev">
+        Events
+      </a></span> <span class="next"><a href="/docs/inspector.html">
+        Inspector
+      </a>
+      →
+    </span></p></div> </main></div> <script>
+    kofiWidgetOverlay.draw('ene', {
+      'type': 'floating-chat',
+      'floating-chat.donateButton.text': 'Support me',
+      'floating-chat.donateButton.background-color': '#ff38b8',
+      'floating-chat.donateButton.text-color': '#fff'
+    });
+  </script></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7fb1c865.js" defer></script><script src="/assets/js/2.dae40f8a.js" defer></script><script src="/assets/js/20.4f18344d.js" defer></script>
+  </body>
+</html>
