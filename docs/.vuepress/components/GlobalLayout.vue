@@ -2,7 +2,7 @@
   <div id="global-layout">
     <component :is="layout"/>
     <script>
-      kofiWidgetOverlay.draw('ghostdev', {
+      kofiWidgetOverlay.draw('ene', {
         'type': 'floating-chat',
         'floating-chat.donateButton.text': 'Support me',
         'floating-chat.donateButton.background-color': '#ff38b8',
